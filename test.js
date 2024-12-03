@@ -31,3 +31,13 @@ function extractFirstWord(message){
     const string_1 = message.split(" ")[0];
     return string_1;
 }
+
+//Task 5
+let string = "hadia@gmail.com";
+console.log(maskEmail(string));
+function maskEmail(string){
+    const [username, domain] = string.split("@");
+    const first = username.charAt(0);
+    const maskString = first+"****@"+domain;
+    return maskString;
+}
